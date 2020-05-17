@@ -1,0 +1,82 @@
+@import url("reset.css"); 
+html{
+    height: 100%;
+}
+body{
+    font-size: 16px;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:rgb(112, 112, 112);
+    height: inherit;
+    margin: 100px;
+}
+header{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+h1{
+    font-size:3em;
+    padding-top:1.5rem;
+    padding-bottom: 1.5rem;
+}
+P{
+    font-size: 1.5em;
+}
+.paragraph{
+    padding: 2rem 2rem 2rem 2rem;
+}
+.blog-link{
+    text-decoration: none;
+    color: inherit ;
+    color: #4bc6ff ;
+}
+.colored{
+    color:rgb(87, 0, 87);
+}
+.author{
+    display: grid;
+    grid-template-areas:    "pic txt"
+                            "pic txt";
+    grid-template-columns: min-content auto;
+    grid-template-rows: min-content auto;
+
+}
+#p-imageBox{
+    grid-area:pic;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+}
+#p-photo{
+    border-radius: 100%;
+    width: 5em;
+    height: 5em;
+    background-color: rgb(112, 112, 112);
+    color: seashell;
+    text-align: center;
+    background: url(../images/p-photo3.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 4px;
+
+}
+#p-text{
+    grid-area: txt;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    align-self: center;
+    justify-content: space-evenly;
+    margin: 4px;
+}

@@ -29,12 +29,6 @@ body{
     padding-left:20px;
     padding-right:20px;
 }
-
-.box{
-   /* border: solid 4px red;
-   font-family: "Comic Sans MS", cursive, sans-serif;
-    border-radius: 25px;*/
-}
 .blog{
     grid-area: bl;
     font-size:3em;
@@ -118,7 +112,6 @@ body{
 
 .item-heading{
     font-size: 1.5em;
-    font-weight: 300;
     margin-bottom:10px;
 }
 p{
