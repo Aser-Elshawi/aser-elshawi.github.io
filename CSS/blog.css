@@ -27,6 +27,7 @@ h1{
     padding-top:1.5rem;
     padding-bottom: 1.5rem;
 }
+
 P{
     font-size: 1.5em;
 }
@@ -79,4 +80,11 @@ P{
     align-self: center;
     justify-content: space-evenly;
     margin: 4px;
+    
+}
+#p-name{
+    font-size: 1.5em;
+}
+#p-date{
+    font-size: .7rem;
 }
