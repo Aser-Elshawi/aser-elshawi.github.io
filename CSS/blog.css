@@ -1,40 +1,6 @@
 @import url("reset.css"); 
-html{
-    height: 100%;
+@import url("blog-tags.css");
 
-}
-body{
-    font-size: 16px;
-    font-style: normal;
-    font-variant-ligatures: normal;
-    font-variant-caps: normal;
-    font-variant-numeric: normal;
-    font-variant-east-asian: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    line-height: 1.5;
-    font-family: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color:rgb(112, 112, 112);
-    height: auto;
-    margin-top:10px;
-
-}
-header{
-    margin-left: 10%;
-    margin-right: 10%;
-}
-h1{
-    font-size:3rem;
-    padding-top:1.5rem;
-    padding-bottom: 1.5rem;
-}
-
-P{
-    font-size: 1.2rem;
-    margin-bottom:2.2em;
-    text-justify: distribute;
-    text-align: justify;
-}
 .paragraph{
     font-size: 1.2rem;
 }
@@ -130,28 +96,6 @@ pre code {
     white-space: nowrap;
 }
 
-
-ul {
-    list-style-type: square;
-    list-style-position: inside;
-    margin-left: 20px;
-    margin-bottom: 2.2rem;
-  }
-ol {
-    list-style-type: upper-roman;
-    list-style-position: inside;
-    margin-left: 20px;
-    margin-bottom: 2.2rem;
-  }
-  h2{
-    font-size:1.5rem;
-    margin-bottom: 20px;
-    color:rgb(87, 0, 87);
-}
-section{
-    margin-left: 10%;
-    margin-right: 10%;
-}
 .mdl-image{
     display:block;
     object-fit: cover;
@@ -162,30 +106,11 @@ section{
     padding-right: 10%;
     height: 200px;
 }
-figure{
-    text-align: center;
-    margin-bottom: 40px;
-}
+
 .video-container{
     position: relative;
     padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
 }
-iframe{
-    position: absolute;
-    top: 0;
-    left: 10%;
-    width: 80%;
-    height: 80%;
-    }
-
-.footer{
-    grid-area: ft;
-    height: 50px;
-    background-color: rgb(112, 112, 112);;
-    color:whitesmoke;
-    border-radius: 5px;
-    padding:10px;
-    }
 a:hover {
     color: #2ba6ff;
 }
