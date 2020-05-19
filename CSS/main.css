@@ -45,7 +45,7 @@
 a:hover {
     color: #2ba6ff;
 }
-.button_login {
+.button_blue{
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
@@ -62,14 +62,14 @@ a:hover {
     margin-bottom:20px;
 }
 
-.button_login:hover {
+.button_blue:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
 }
 
-.sub_login {
+.sub_white {
     color: #4bc6ff !important;
     border: solid 4px #4bc6ff;
     text-transform: uppercase;
@@ -85,7 +85,7 @@ a:hover {
     margin-bottom:50px;
 }
     
-.sub_login:hover {
+.sub_white:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
