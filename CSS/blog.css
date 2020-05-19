@@ -1,5 +1,5 @@
-@import url("reset.css"); 
-@import url("blog-tags.css");
+@import "reset.css"; 
+@import "blog-tags.css";
 
 .paragraph{
     font-size: 1.2rem;
