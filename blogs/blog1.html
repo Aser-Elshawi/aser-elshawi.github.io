@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>3D Jit</title>
+    <meta name="author" content="Aser Elshawi">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+      name="viewport"
+    />
+    <link rel = "icon" href =  
+"../images/jet-icon.png" 
+        type = "image/x-icon">
+    <link rel="stylesheet" type="text/css" href="..\CSS\blog.css" >
+  </head>
+
+  <body>
+    <header>
+      <a class="blog-link" href="..\index.html">Back to main</a>
+      <h1 class="item-heading">Printing Electric Jet Engine</h1>
+      <div class="author">
+        <div id="p-imageBox">
+          <div id="p-photo">
+
+          </div>
+        </div>
+        <div id="p-text">
+          <div id="p-name">
+            <span id="auth-name" class="colored">Author: Aser Elshawi</span>
+          </div>
+          <div id="p-date">
+            <p>last updated on: 5/17/2020</p>
+          </div>
+        </div>
+      </div>
+      <div class="paragraph">
+        <p>Is it possible to 3D print electric engine from scratch? While searching I came accross the following interesting page
+          <a class="blog-link" href="http://amazingdiyprojects.com/">Amazing Diy Projects</a> so I decided to download the stl (3D)
+          files and try it with the help of my friend.
+        </p>
+      </div>
+    </header>
+    <article>
+      <section class="paragraph">
+        <h2>Main build components:</h2>
+        <ul>
+          <li>3D plastic prints</li>
+          <li>Magnetic disks</li>
+          <li>Drill rod</li>
+          <li>Enameled magnetic wire</li>
+        </ul> 
+
+        <p>In order to get the 3D parts printed, I'm using my Ender 3 Pro printer: </p>
+        <figure >
+          <img class="mdl-image" src="../images/ender3pro.jpg" alt="Ender 3 Pro">
+          <figcaption >Fig.1 - Ender 3 pro printer.</figcaption>
+        </figure>
+        <h2>A simple DC motor consists mainly of two parts:</h2>
+        <ul>
+          <li>Permanent magnet Stator </li>
+          <li>Tow pole electrically wired Rotor </li>
+        </ul>
+        <p>
+          Fairly simple design, the only tricky part here is 
+          delivering the current to wires on the rotor to keep the magnetic field and thus keep the momentum.
+          That’s when the brush comes into the picture, with springs pushing the brush 
+          into the rotor the electric current is delivered, but what if we can do without the brush?
+        </p>
+        <p>
+          Yes, simple this could be achieved if we move the permanent magnet to the rotor, 
+          and connect the wires directly to the stator instead. Great! But is this possible?
+        </p>
+        <p>
+          Well the only problem would be controlling the current through the coils on the 
+          stator to change the direction during the rotor rotation. Luckily we can achieve 
+          this with an Arduino and ESC (Electric Speed Controller).
+        </p>
+        <p>
+          The Arduino would simply provide a PWM signal to the ESC, and the ESC will take care of the rest.
+        </p>
+        <h2>
+          The Arduino code:
+        </h2>
+        <div class="codeSnip">
+          <div class="cmnt"></div>
+            <div class="codetxt">
+  <pre>#include &lt;Servo.h&gt;
+
+Servo myservo;  // create servo object to control a servo
+     
+int potpin = 0;  // analog pin used to connect the potentiometer
+int val;    // variable to read the value from the analog pin
+
+void setup() {
+  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  val = analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
+  val = map(val, 0, 1023, 0, 180);     // scale it to use it with the servo (value between 0 and 180)
+  myservo.write(val);                  // sets the servo position according to the scaled value
+  delay(15);                           // waits for the servo to get there
+}</pre>
+            </div>
+          </div>
+    
+        </div>
+        <h2>
+          Now, let’s look at the Jet engine in action:
+        </h2>
+          <div class="video-container">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/h5VDYsMkZ5w" 
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+            </iframe>
+          </div>
+        
+      </section>
+    </article>
+    
+    <footer>
+      <div class="footer">Copyright 2020</div>
+    </footer>
+     
+      
+  </body>
+</html>
